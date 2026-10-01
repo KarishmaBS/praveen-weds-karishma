@@ -1,0 +1,611 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_blank" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Alex+Brush&amp;family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Great+Vibes&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed": "#ffdf98",
+          "on-tertiary-container": "#e4838c",
+          "on-error": "#ffffff",
+          "on-primary-fixed-variant": "#70343c",
+          "on-secondary-fixed-variant": "#5a4300",
+          "on-tertiary": "#ffffff",
+          "surface": "#fdf9f3",
+          "surface-bright": "#fdf9f3",
+          "outline-variant": "#d7c1c2",
+          "surface-variant": "#e6e2dc",
+          "tertiary-fixed": "#ffdadb",
+          "surface-dim": "#dddad4",
+          "surface-container-high": "#ebe8e2",
+          "secondary-fixed-dim": "#eec14b",
+          "on-surface": "#1c1c18",
+          "inverse-on-surface": "#f4f0ea",
+          "on-secondary-container": "#735700",
+          "primary-fixed-dim": "#ffb2b9",
+          "on-primary-container": "#d88a91",
+          "secondary": "#775a00",
+          "primary": "#410f18",
+          "inverse-surface": "#31302d",
+          "on-primary": "#ffffff",
+          "primary-fixed": "#ffdadc",
+          "error": "#ba1a1a",
+          "surface-container-lowest": "#ffffff",
+          "primary-container": "#5c242c",
+          "on-error-container": "#93000a",
+          "on-secondary-fixed": "#251a00",
+          "surface-container": "#f1ede7",
+          "on-primary-fixed": "#3a0913",
+          "on-background": "#1c1c18",
+          "outline": "#857374",
+          "surface-tint": "#8d4b52",
+          "on-tertiary-fixed": "#3f020f",
+          "surface-container-highest": "#e6e2dc",
+          "secondary-container": "#fece57",
+          "error-container": "#ffdad6",
+          "on-tertiary-fixed-variant": "#792e38",
+          "on-secondary": "#ffffff",
+          "tertiary-container": "#631d28",
+          "surface-container-low": "#f7f3ed",
+          "tertiary-fixed-dim": "#ffb2b8",
+          "inverse-primary": "#ffb2b9",
+          "tertiary": "#460614",
+          "on-surface-variant": "#524344",
+          "background": "#fdf9f3"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-md": "1rem",
+          "space-lg": "1.75rem",
+          "space-xs": "0.25rem",
+          "gutter": "1.5rem",
+          "margin": "2rem",
+          "space-xl": "3rem",
+          "space-sm": "0.5rem"
+        },
+        "fontFamily": {
+          "display-lg-mobile": ["Playfair Display"],
+          "headline-lg": ["Playfair Display"],
+          "display-lg": ["Playfair Display"],
+          "headline-md": ["Playfair Display"],
+          "label-md": ["Playfair Display"],
+          "label-lg": ["Playfair Display"],
+          "body-lg": ["EB Garamond"],
+          "title-lg": ["EB Garamond"],
+          "headline-lg-mobile": ["Playfair Display"],
+          "body-md": ["EB Garamond"],
+          "script": ["Alex Brush", "Great Vibes", "cursive"]
+        },
+        "fontSize": {
+          "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+          "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0.15em", "fontWeight": "500"}],
+          "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "0.12em", "fontWeight": "600"}],
+          "headline-md": ["22px", {"lineHeight": "30px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+          "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.18em", "fontWeight": "600"}],
+          "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.22em", "fontWeight": "600"}],
+          "body-lg": ["19px", {"lineHeight": "30px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+          "title-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+          "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "0.12em", "fontWeight": "500"}],
+          "body-md": ["17px", {"lineHeight": "26px", "letterSpacing": "0.02em", "fontWeight": "400"}]
+        }
+      },
+    },
+  }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fdf9f3;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}
+.chrome-frame {
+  background: linear-gradient(135deg, #e2e4e7 0%, #ffffff 20%, #9ca3af 45%, #ffffff 55%, #6b7280 85%, #d1d5db 100%);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.7), inset 0 1px 3px rgba(255, 255, 255, 0.9), inset 0 -2px 4px rgba(0, 0, 0, 0.5);
+}
+.chrome-inner-bevel {
+  background: linear-gradient(180deg, #111827 0%, #1f2937 50%, #030712 100%);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+</style></head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen pt-safe pb-safe"><main class="flex flex-col relative w-full bg-surface min-h-screen"><div class="flex flex-col w-full relative overflow-hidden text-on-surface">
+<!-- Dynamic Petal Canvas Effect -->
+<div class="pointer-events-none fixed inset-0 z-50 overflow-hidden" id="petal-container"></div>
+<!-- 1. Custom URL Simulation Bar -->
+<div class="w-full px-4 py-2 bg-surface-container-high/90 backdrop-blur-md sticky top-0 z-40 shadow-sm flex items-center justify-between gap-2 border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5 min-w-0 bg-surface px-3 py-1.5 rounded-full shadow-inner flex-1 mr-2 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary text-sm shrink-0">lock</span>
+<span class="font-body-md text-xs truncate text-on-surface-variant select-all tracking-wide">forever.love/praveen-weds-karishma</span>
+</div>
+<div class="flex items-center gap-1.5 shrink-0"><button class="bg-primary text-on-primary hover:bg-primary-container px-3 py-1 rounded-full text-xs font-label-md flex items-center gap-1 transition-all active:scale-95 shadow-sm" onclick="copyInviteLink(this)"><span class="material-symbols-outlined text-xs">content_copy</span><span class="">Copy</span></button><a class="bg-emerald-700 hover:bg-emerald-800 text-white px-3 py-1 rounded-full text-xs font-label-md flex items-center gap-1 transition-all active:scale-95 shadow-sm" href="https://api.whatsapp.com/send?text=Praveen%20%26%20Karishma%20Wedding%20Invitation%20%7C%20You%20are%20cordially%20invited%20to%20celebrate%20our%20sacred%20wedding%20union%20%26%20reception!%20View%20the%20invitation%20%26%20album:%20https://forever.love/praveen-weds-karishma" target="_blank"><span class="material-symbols-outlined text-xs">share</span><span class="">Share</span></a></div>
+</div>
+<!-- Ambient Audio Player Bar -->
+<div class="w-full bg-[#32080e] text-on-primary-fixed px-4 py-2.5 flex items-center justify-between shadow-md border-b border-white/10">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-secondary-fixed animate-pulse text-base">music_note</span>
+
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<div class="flex items-end gap-0.5 h-4" id="equalizer-bars">
+<div class="w-1 bg-secondary-fixed h-2 animate-[bounce_1s_infinite_100ms]"></div>
+<div class="w-1 bg-secondary-fixed h-4 animate-[bounce_1s_infinite_300ms]"></div>
+<div class="w-1 bg-secondary-fixed h-1 animate-[bounce_1s_infinite_200ms]"></div>
+<div class="w-1 bg-secondary-fixed h-3 animate-[bounce_1s_infinite_400ms]"></div>
+</div>
+<button class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shadow-inner hover:scale-105 active:scale-90 transition-transform" id="audio-toggle" onclick="toggleAudio()">
+<span class="material-symbols-outlined text-base" id="audio-icon">volume_up</span>
+</button>
+</div>
+</div>
+<!-- ============================================== -->
+<!-- 0. EXACT REPLICA OF HERO COVER (IMAGE_2 STYLE) -->
+<!-- ============================================== -->
+<section class="w-full bg-[#3e0811] text-[#f7f0ea] min-h-[92vh] flex flex-col items-center justify-between py-10 px-4 relative select-none cursor-pointer overflow-hidden" id="first-page-cover" onclick="handleTapToOpen()">
+<!-- Subtle Vignette Glow -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_0%,rgba(0,0,0,0.45)_100%)] pointer-events-none"></div>
+<!-- Header Section -->
+<div class="flex flex-col items-center text-center z-10 pt-2 pb-4">
+<p class="font-label-md text-[11px] sm:text-xs tracking-[0.38em] uppercase text-[#e9c7cb] font-normal mb-2">
+      A SPECIAL MAIL IS COMING FORM
+    </p>
+<h1 class="font-script text-5xl sm:text-6xl text-[#fbf6f2] font-normal tracking-wide drop-shadow-md py-1">
+      Praveen &amp; Karishma
+    </h1>
+</div>
+<!-- Centerpiece: Silver Photobooth Strip Frame -->
+<div class="relative z-10 my-auto group transition-transform duration-300 active:scale-[0.98]">
+<!-- Outer Chrome Beveled Bezel -->
+<div class="p-2 sm:p-2.5 rounded-[14px] chrome-frame">
+<!-- Inner Deep Recessed Bevel -->
+<div class="p-1 rounded-[10px] chrome-inner-bevel">
+<!-- Photo Strip Column -->
+<div class="w-[150px] sm:w-[170px] bg-white p-2 rounded-lg flex flex-col gap-2.5 shadow-2xl relative border border-secondary/20"><div class="w-full aspect-square overflow-hidden bg-neutral-900 rounded shadow-sm border border-black/10"><img alt="Praveen &amp; Karishma Sitting" class="w-full h-full object-cover object-center brightness-95 contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Rphp9mLUHZ6Y9pm9c1rVf13t3srAzb00ONjKP-j0NwVfnWVdliQgcSpp3lGxDnsDmxRZKs4BwVeFSBI1vR0iTwoQQkBwRPQP_-KR04ezjgaPzDW_duSUm7CNd_6NblTOqp8fqCz9JC4kA7PdzMGWc7QQPz6xwQrhhJh7Zr5aUa3QTM4f2jj2CvjJE2FRtSs0p4p2OMVxnjxipFLRvGtOSR3j_8S6BLLneGADVqK8ny22L-1ASR3jC0MD5zwnyDjydA"></div><div class="w-full aspect-square overflow-hidden bg-neutral-900 rounded shadow-sm border border-black/10"><img alt="Praveen &amp; Karishma Smiling Portrait" class="w-full h-full object-cover object-top brightness-95 contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBARxEkMor8g3-3DRAlI7CdeWPJVqLxs4Zpg-ZNGD8h3RKQsFNhWyQ2eeMGaFrYH0Ou_oDEyfjUW_M1WoTEssXVTpv9ln4j2YR5f-j003GulD2N2XpOjz0bkXaViuj3H3VTEWF5AQCYlBwNxe4cbOlMF4oXsdMlUFqZDfmM_8eHjvQjafzDgPg0kDKIR3YtO5uGWASoMBs87m17fTTRjGU2vIjujU3zQeilIki5Ecx4ldGe-ME4PgLcML-Py2y3ZuWMgA"></div><div class="w-full aspect-square overflow-hidden bg-neutral-900 rounded shadow-sm border border-black/10"><img alt="Praveen &amp; Karishma Walking Together" class="w-full h-full object-cover object-top brightness-95 contrast-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VNKMUxxoblsOpiCft06b_yZflbHoeGrxwXX8N8okiZQ-S2YXI87YkSTboa4apNryGI8oo0VpkmsW1S7qm-AWvxNaxf_tXrnDpYtI0dS9RqTz9qwzSwQs0igt5uB23j0GFJoJjxyTKFJzATULri3mWcl-71hM5dEx5xl_c9Fgs8HpD3iGh2sOdivuKkNzVWxP4MoudqvQGpTJDs8a5DtichjPZ3Lc-k8-IN__-ThWndh2nPPjt-7AOnbQ"></div><div class="w-full aspect-square overflow-hidden bg-neutral-900 rounded shadow-sm border border-black/10"><img alt="Holding hands with wedding bangles" class="w-full h-full object-cover object-center brightness-95 contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWvGNrNK33B0H8vihMWqm4S14lth10z6y7cBaQZxZmLs43lWsUfDUVNH1a8dKB8TXSLFhxn5VM21fM28Ld7kFyzYRsowVOOZ1aM4CNrX8SnjNJBpwJFTOp_5RYAUM5JtlNa4jtIyYRLBl_Pvz36x3auoehxFuG-6tmWD5NkAZvJ6Vk6GoQ-Itw7rYl5_foeseOHgL90wdqiSGhKYD3C7l3Bc0iAD3goiDNv5kben0v2d48v_bUAOwh8LZtkUDCfqNOYA"></div><div class="absolute inset-0 flex items-center justify-center pointer-events-none"><div class="w-12 h-12 rounded-full bg-white/40 backdrop-blur-[2px] flex items-center justify-center shadow-lg border border-white/50 pl-0.5 group-hover:scale-110 transition-transform"><svg class="w-6 h-6 text-white drop-shadow fill-white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div></div></div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: TAP TO OPEN -->
+<div class="flex flex-col items-center z-10 pb-4 pt-4">
+<p class="font-label-md text-xs sm:text-sm tracking-[0.42em] uppercase text-[#e9c7cb] font-medium transition-colors group-hover:text-white">
+      TAP TO OPEN
+    </p>
+</div>
+</section>
+<!-- MAIN INVITATION BODY CONTAINER -->
+<div class="max-w-[580px] w-full mx-auto px-4 py-4 flex flex-col gap-8 transition-all duration-700 opacity-100" id="invitation-main-content">
+<!-- 2. HERO COVER CARD: Magnificent Authentic Temple Invitation Cover -->
+<div class="relative bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden p-4 sm:p-6 flex flex-col items-center border border-secondary/30">
+<!-- Subtle Luxury Gold Foil Corner Embellishments -->
+<div class="absolute top-3 left-3 text-secondary/40 pointer-events-none">
+<svg fill="currentColor" height="34" viewBox="0 0 40 40" width="34">
+<path d="M0,0 L40,0 C20,5 5,20 0,40 Z"></path>
+<circle cx="8" cy="8" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+<div class="absolute top-3 right-3 text-secondary/40 pointer-events-none rotate-90">
+<svg fill="currentColor" height="34" viewBox="0 0 40 40" width="34">
+<path d="M0,0 L40,0 C20,5 5,20 0,40 Z"></path>
+<circle cx="8" cy="8" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+<div class="absolute bottom-3 left-3 text-secondary/40 pointer-events-none -rotate-90">
+<svg fill="currentColor" height="34" viewBox="0 0 40 40" width="34">
+<path d="M0,0 L40,0 C20,5 5,20 0,40 Z"></path>
+<circle cx="8" cy="8" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+<div class="absolute bottom-3 right-3 text-secondary/40 pointer-events-none rotate-180">
+<svg fill="currentColor" height="34" viewBox="0 0 40 40" width="34">
+<path d="M0,0 L40,0 C20,5 5,20 0,40 Z"></path>
+<circle cx="8" cy="8" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+<!-- Sacred Invocation & Royal Monogram Seal -->
+<!-- Magnificent Royal Arched Invitation Card: IMAGE_16 -->
+<div class="w-full relative rounded-xl p-2.5 bg-gradient-to-b from-[#eec14b]/30 via-[#5c242c]/10 to-[#eec14b]/30 shadow-inner border border-secondary/30 my-2">
+<div class="relative w-full rounded-lg overflow-hidden bg-white shadow-xl border border-secondary/20">
+<img alt="Praveen &amp; Karishma Wedding &amp; Reception Official Temple Invitation Card" class="w-full h-auto object-contain block hover:scale-[1.01] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmria6d8pS-EVbroSxTr34i-GXo5mkr5Hrbf3N5n13Ogg7HxGkjK00N97VzkENzHi3ugs3Ah-hOYnaXexBZd5xaGvSDSQZA-y2eLFm312UYoGfdpR58zzOLlZmUgmTIiaZEga7ZvAq6GM4rOvWgKxetgPykNYKAqcBn2FxKZtIH87WKmggNsOxjbpUKrnGN6Ai2axjl2vIxvo15ER_CBtnQALNuaC1cV_YslKg6_baXJXKEHgJV4E_WpTGFXbdL2Z6pQ">
+<div class="absolute inset-0 ring-1 ring-inset ring-secondary/20 pointer-events-none rounded-lg"></div>
+</div>
+</div>
+<!-- Welcome Message -->
+<div class="mt-4 flex flex-col items-center text-center px-2">
+<p class="font-body-lg text-primary max-w-md leading-relaxed font-medium">Together with our families, we warmly invite you to celebrate our sacred wedding union and grand reception.</p>
+<div class="mt-3 px-5 py-1.5 rounded-full bg-surface-container border border-secondary/30 flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-sm">temple_hindu</span>
+<span class="font-label-lg text-primary text-xs uppercase tracking-widest">
+  Nov 19 &amp; 20, 2026 • Karur, Tamil Nadu
+</span>
+</div>
+</div>
+<!-- Live Union Countdown -->
+<div class="w-full mt-5 pt-4 bg-surface-container-low/80 rounded-xl p-4 flex flex-col items-center border border-secondary/20 shadow-sm">
+<span class="font-label-md text-secondary text-xs uppercase tracking-wider mb-2 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">schedule</span> Counting Down To The Sacred Muhurtham
+</span>
+<div class="grid grid-cols-4 gap-2 w-full max-w-xs text-center">
+<div class="bg-surface-container-lowest p-2 rounded-lg shadow-sm border border-secondary/15">
+<span class="font-headline-md text-primary block leading-none font-semibold" id="days">49</span>
+<span class="font-label-md text-[10px] text-outline uppercase">Days</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg shadow-sm border border-secondary/15">
+<span class="font-headline-md text-primary block leading-none font-semibold" id="hours">15</span>
+<span class="font-label-md text-[10px] text-outline uppercase">Hours</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg shadow-sm border border-secondary/15">
+<span class="font-headline-md text-primary block leading-none font-semibold" id="minutes">16</span>
+<span class="font-label-md text-[10px] text-outline uppercase">Mins</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-lg shadow-sm border border-secondary/15">
+<span class="font-headline-md text-primary block leading-none font-semibold" id="seconds">4</span>
+<span class="font-label-md text-[10px] text-outline uppercase">Secs</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. INVITATION CARD 1: RECEPTION -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-xl p-5 sm:p-6 flex flex-col relative overflow-hidden border border-secondary/30"><div class="h-2 w-full bg-gradient-to-r from-secondary-fixed via-secondary to-primary-container absolute top-0 left-0"></div><div class="w-full rounded-xl overflow-hidden shadow-lg border border-secondary/20 bg-white mt-2 mb-4"><img alt="Reception Invitation - Praveen &amp; Karishma" class="w-full h-auto object-contain block hover:scale-[1.01] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb_vjkSTWdu4O2LHTr1lCZCvjmfeGIQ_7vxBQZLKYi7YhPzl0bqQPvP_zIwhZO3l-GiB-iMLmA3bhvyLdaPlwLRxCvTjk-mZNNvuAyjni5b4Wgz2_-5eG2WciXRrONd_7uP7U1MHw7alUhgm4dZRkdGqpawCXqy-1O8-f7BztGQIGywPfLUt7-eN8PSSWTBSZz63GIus8-aQ2Y0cJB2lDhU1Z31cb-31mCYoIkt62ksUum4iEhrD96bdEros_8FXktng"></div><div class="flex flex-col gap-2.5 bg-surface-container-low p-4 rounded-xl mb-4 border border-secondary/20"><div class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined text-lg">event</span></div><div><span class="font-label-md text-xs text-outline uppercase block">Date &amp; Day</span><span class="font-title-lg text-primary text-base font-semibold">Thursday, 19th November 2026</span></div></div><div class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined text-lg">schedule</span></div><div><span class="font-label-md text-xs text-outline uppercase block">Time</span><span class="font-title-lg text-primary text-base font-semibold">6:00 PM – 9:00 PM</span></div></div><div class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined text-lg">location_on</span></div><div><span class="font-label-md text-xs text-outline uppercase block">Venue</span><span class="font-title-lg text-primary text-base font-semibold">Karpaga Mahal</span><span class="font-body-md text-sm text-on-surface-variant block">Kadaparai, Karur - 639006</span></div></div></div><a class="w-full bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-xs tracking-wider uppercase py-3 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-sm border border-secondary/30 font-semibold" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Reception+-+Praveen+weds+Karishma&amp;dates=20261119T123000Z/20261119T163000Z&amp;details=Reception+celebration+of+Praveen+Kumar+and+Karishma&amp;location=Karpaga+Mahal,+Kadaparai,+Karur" target="_blank"><span class="material-symbols-outlined text-base text-secondary">event_upcoming</span>Add Reception to Calendar</a></div>
+<!-- 5. INVITATION CARD 2: MUHURTHAM -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-xl p-5 sm:p-6 flex flex-col relative overflow-hidden border border-secondary/30"><div class="h-2 w-full bg-gradient-to-r from-primary via-primary-container to-secondary absolute top-0 left-0"></div><div class="w-full rounded-xl overflow-hidden shadow-lg border border-secondary/20 bg-white mt-2 mb-4"><img alt="Muhurtham Kalyanam Invitation - Praveen &amp; Karishma" class="w-full h-auto object-contain block hover:scale-[1.01] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB48K8HiXq7_TUGTs8VsUgov-yWDUuvk6IkPK_RVV84CWRz9mFCmwaviEQYsb0q_Dcwlrqc0tUyXUcM58H2ezAeuRcN3-AiLcMupnpvEIEjjd49B6xV2JBnREPjoY8zzGNQ0j0EI39nGfPjQQXCGfJzpnxFMxi98mOedOAgIkLmb3I3H2niCI66sGll2PYRpwtWaKDsP17z8tw9wfD58lWOoC8XmkjfcgEaoWi87kBQgd-5r1h5w3CLC87LhRkUS9wmw"></div><div class="flex flex-col gap-2.5 bg-surface-container-low p-4 rounded-xl mb-4 border border-secondary/20"><div class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined text-lg">event</span></div><div><span class="font-label-md text-xs text-outline uppercase block">Date &amp; Day</span><span class="font-title-lg text-primary text-base font-semibold">Friday, 20th November 2026</span></div></div><div class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0 shadow-sm"><span class="material-symbols-outlined text-lg">alarm_on</span></div><div><span class="font-label-md text-xs text-secondary font-bold uppercase block">Auspicious Muhurtham Hour</span><span class="font-title-lg text-primary text-base font-bold">6:00 AM – 7:00 AM</span></div></div><div class="flex items-start gap-3"><div class="w-8 h-8 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined text-lg">temple_buddhist</span></div><div><span class="font-label-md text-xs text-outline uppercase block">Ceremony Location</span><span class="font-title-lg text-primary text-base font-semibold">Sri Balasubramaniam Temple</span><span class="font-body-md text-sm text-on-surface-variant block">Pavithiram, Karur District</span></div></div><div class="flex items-start gap-3 pt-2 border-t border-outline-variant/30"><div class="w-8 h-8 rounded-full bg-secondary-container/40 flex items-center justify-center text-secondary shrink-0"><span class="material-symbols-outlined text-lg">restaurant</span></div><div><span class="font-label-md text-xs text-outline uppercase block">Traditional Feast &amp; Breakfast</span><span class="font-body-md text-sm text-primary font-semibold block">Follows immediately at Karpaga Mahal, Kadaparai, Karur</span></div></div></div><a class="w-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-xs tracking-wider uppercase py-3 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-md font-semibold" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Muhurtham+-+Praveen+weds+Karishma&amp;dates=20261120T003000Z/20261120T043000Z&amp;details=Sacred+Kalyanam+Muhurtham+of+Praveen+and+Karishma&amp;location=Sri+Balasubramaniam+Temple,+Pavithiram" target="_blank"><span class="material-symbols-outlined text-base">notifications_active</span>Set Muhurtham Calendar Reminder</a></div>
+<!-- 6. VENUE DIRECTIONS, MAP & SCANNABLE QR CODE -->
+<div class="bg-surface-container-low rounded-2xl p-6 shadow-md flex flex-col gap-5 border border-secondary/20">
+<div class="text-center">
+<span class="font-label-md text-secondary text-xs uppercase tracking-widest font-semibold">Guide For Guests</span>
+<h3 class="font-headline-md text-primary mt-1">Venues &amp; Navigation</h3>
+<p class="font-body-md text-on-surface-variant text-sm mt-1">
+  Scan the QR code or click below to launch live turn-by-turn navigation in Google Maps.
+</p>
+</div>
+<!-- Two Venue Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Venue 1: Reception & Feast -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col justify-between border border-secondary/15">
+<div>
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-sm">home_work</span>
+<span class="font-label-md text-[11px] uppercase tracking-wider">Grand Hall &amp; Feast</span>
+</div>
+<h4 class="font-title-lg text-primary text-base font-semibold">Karpaga Mahal</h4>
+<p class="font-body-md text-xs text-on-surface-variant mt-1 leading-relaxed">
+  Trichy - Karur Main Highway, Kadaparai, Karur, Tamil Nadu 639006
+</p>
+</div>
+<a class="mt-4 inline-flex items-center justify-center gap-1.5 py-2 px-3 bg-surface-container hover:bg-surface-container-high rounded-lg text-xs font-label-md text-primary transition-all font-semibold border border-secondary/20" href="https://maps.google.com/?q=Karpaga+Mahal+Kadaparai+Karur" target="_blank">
+<span class="material-symbols-outlined text-sm text-secondary">directions_car</span>
+Directions to Mahal
+</a>
+</div>
+<!-- Venue 2: Muhurtham Temple -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col justify-between border border-secondary/15">
+<div>
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-sm">temple_hindu</span>
+<span class="font-label-md text-[11px] uppercase tracking-wider">Sacred Muhurtham</span>
+</div>
+<h4 class="font-title-lg text-primary text-base font-semibold">Sri Balasubramaniam Temple</h4>
+<p class="font-body-md text-xs text-on-surface-variant mt-1 leading-relaxed">
+  Pavithiram, Karur District, Tamil Nadu
+</p>
+</div>
+<a class="mt-4 inline-flex items-center justify-center gap-1.5 py-2 px-3 bg-surface-container hover:bg-surface-container-high rounded-lg text-xs font-label-md text-primary transition-all font-semibold border border-secondary/20" href="https://maps.google.com/?q=Sri+Balasubramaniam+Temple+Pavithiram" target="_blank">
+<span class="material-symbols-outlined text-sm text-secondary">explore</span>
+Directions to Temple
+</a>
+</div>
+</div>
+<!-- Scannable QR Code Invitation Display -->
+<div class="w-full rounded-2xl overflow-hidden shadow-xl border-2 border-secondary/30 bg-surface-container-lowest flex flex-col items-center p-3 sm:p-5"><div class="w-full rounded-xl overflow-hidden shadow-md bg-white border border-secondary/20 mb-4"><img alt="Wedding Venue Directions &amp; QR Code - Karpaga Mahal" class="w-full h-auto object-contain block hover:scale-[1.01] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx49Ml8LClzJ8FEMbJP5yX-CQJbC1XXF4vPkWmNEhGqAIE8Rh87paAZO-3QA08sNfAqJ2_uzCHsl_vtM3-tz2GJq1uFX69kn1IpN8wmVj4WvhpuGYSestfirKh83yGkJ4U-Xg5Ul4fM5nsniwmXf4PwZcFctZLcJVCOwLOENFNQ5RZbwfdTFyv0YquLVHBOPRukzDRx4Xy18gmEchLzWl_pjj46FEeeDSfoftypd0GaE8Ua6QqiwUpo-w-ru55kZdftg"></div><a class="w-full bg-primary hover:bg-primary-container text-on-primary py-3.5 px-4 rounded-xl font-label-md text-sm tracking-widest uppercase flex items-center justify-center gap-2 shadow-lg hover:scale-[1.01] active:scale-[0.98] transition-all font-semibold" href="https://maps.google.com/?q=Karpaga+Mahal+Kadaparai+Karur" target="_blank"><span class="material-symbols-outlined text-lg">map</span>Open Live Google Maps Navigation</a><p class="font-body-md text-xs text-outline mt-2 text-center">Direct GPS turn-by-turn navigation to Karpaga Mahal, Kadaparai</p></div>
+</div>
+<!-- 8. SEND BLESSINGS & WISHES INTERACTIVE GUESTBOOK -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-xl p-5 sm:p-6 flex flex-col border border-secondary/30">
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-sm">edit_note</span>
+<span class="font-label-md text-xs uppercase tracking-wider font-semibold">Aashirvaad &amp; Wishes</span>
+</div>
+<h3 class="font-headline-md text-primary">Shower Your Blessings</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">
+  Leave a warm greeting for Praveen &amp; Karishma as they embark on this sacred path together.
+</p>
+<form class="flex flex-col gap-4" id="wishes-form" onsubmit="handleSendBlessing(event)">
+<div>
+<label class="block font-label-md text-xs text-on-surface-variant uppercase tracking-wider mb-1 font-semibold" for="guest-name">
+  Your Full Name *
+</label>
+<input class="w-full bg-surface-container-low px-4 py-2.5 rounded-lg text-sm font-body-md text-on-surface focus:outline-none focus:bg-surface-container-high transition-colors placeholder:text-outline/60 border border-secondary/20" id="guest-name" placeholder="e.g. Ramesh &amp; Family" required="" type="text">
+</div>
+<div>
+<label class="block font-label-md text-xs text-on-surface-variant uppercase tracking-wider mb-1 font-semibold">
+  Your Relation With The Couple
+</label>
+<div class="grid grid-cols-3 gap-2">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="relation" type="radio" value="Groom's Side">
+<div class="p-2 text-center rounded-lg bg-surface-container-low peer-checked:bg-primary peer-checked:text-on-primary text-xs font-label-md tracking-wider transition-all border border-secondary/20">
+  Groom's Side
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="relation" type="radio" value="Bride's Side">
+<div class="p-2 text-center rounded-lg bg-surface-container-low peer-checked:bg-primary peer-checked:text-on-primary text-xs font-label-md tracking-wider transition-all border border-secondary/20">
+  Bride's Side
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="relation" type="radio" value="Friends">
+<div class="p-2 text-center rounded-lg bg-surface-container-low peer-checked:bg-primary peer-checked:text-on-primary text-xs font-label-md tracking-wider transition-all border border-secondary/20">
+  Friends
+</div>
+</label>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-xs text-on-surface-variant uppercase tracking-wider mb-1 font-semibold" for="blessing-msg">
+  Your Heartfelt Blessing *
+</label>
+<textarea class="w-full bg-surface-container-low px-4 py-2.5 rounded-lg text-sm font-body-md text-on-surface focus:outline-none focus:bg-surface-container-high transition-colors placeholder:text-outline/60 border border-secondary/20" id="blessing-msg" placeholder="Wishing you both a lifetime of happiness, peace, and prospering togetherness..." required="" rows="3"></textarea>
+<!-- Quick Template Chips -->
+<div class="flex flex-wrap gap-1.5 mt-2">
+<button class="text-[11px] bg-surface-container px-2 py-1 rounded text-primary hover:bg-secondary-fixed transition-colors border border-secondary/20" onclick="setTemplate('May Lord Venkateswara bless your marriage with endless love and joy!')" type="button">
+  + Lord's Grace
+</button>
+<button class="text-[11px] bg-surface-container px-2 py-1 rounded text-primary hover:bg-secondary-fixed transition-colors border border-secondary/20" onclick="setTemplate('Wishing both of you a wonderful married life filled with laughter!')" type="button">
+  + Happy Married Life
+</button>
+<button class="text-[11px] bg-surface-container px-2 py-1 rounded text-primary hover:bg-secondary-fixed transition-colors border border-secondary/20" onclick="setTemplate('Congratulations Praveen &amp; Karishma! Super excited to celebrate with you.')" type="button">
+  + Excited to join!
+</button>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-xs text-on-surface-variant uppercase tracking-wider mb-1 font-semibold">
+  Choose Virtual Blessing Token
+</label>
+<div class="flex items-center gap-3">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="token" type="radio" value="💐">
+<span class="w-10 h-10 rounded-full bg-surface-container-low peer-checked:bg-secondary-fixed peer-checked:scale-110 flex items-center justify-center text-lg transition-all border border-secondary/20">💐</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="token" type="radio" value="🪔">
+<span class="w-10 h-10 rounded-full bg-surface-container-low peer-checked:bg-secondary-fixed peer-checked:scale-110 flex items-center justify-center text-lg transition-all border border-secondary/20">🪔</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="token" type="radio" value="🌸">
+<span class="w-10 h-10 rounded-full bg-surface-container-low peer-checked:bg-secondary-fixed peer-checked:scale-110 flex items-center justify-center text-lg transition-all border border-secondary/20">🌸</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="token" type="radio" value="💍">
+<span class="w-10 h-10 rounded-full bg-surface-container-low peer-checked:bg-secondary-fixed peer-checked:scale-110 flex items-center justify-center text-lg transition-all border border-secondary/20">💍</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="token" type="radio" value="❤️">
+<span class="w-10 h-10 rounded-full bg-surface-container-low peer-checked:bg-secondary-fixed peer-checked:scale-110 flex items-center justify-center text-lg transition-all border border-secondary/20">❤️</span>
+</label>
+</div>
+</div>
+<button class="w-full mt-2 bg-secondary text-on-secondary font-label-md text-xs tracking-wider uppercase py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-secondary/90 transition-all active:scale-[0.98] shadow-md font-semibold" type="submit">
+<span class="material-symbols-outlined text-base">send</span>
+Send Your Warm Blessings ✨
+</button>
+</form>
+<!-- Live Toast Container -->
+<div class="hidden mt-4 p-3 bg-secondary-fixed text-on-secondary-fixed rounded-lg text-xs font-label-md flex items-center gap-2 shadow-sm animate-fade-in" id="toast-message">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="">Thank you! Your heartfelt blessings have been delivered to the couple.</span>
+</div>
+<!-- Preview Feed of Blessings -->
+<div class="mt-6 pt-5 border-t border-surface-container-high flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-xs text-primary uppercase tracking-wider font-semibold">Recent Blessings</span>
+<span class="font-body-md text-xs text-outline">35+ wishes received</span>
+</div>
+<div class="flex flex-col gap-2.5" id="wishes-list">
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col border border-secondary/15">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-base">💐</span>
+<span class="font-title-lg text-primary text-sm font-semibold">Anand &amp; Meena (Coimbatore)</span>
+</div>
+<span class="text-[10px] font-body-md text-outline">Just now</span>
+</div>
+<p class="font-body-md text-xs text-on-surface-variant mt-1">
+  Heartiest congratulations Praveen &amp; Karishma! Wishing you both a lifetime of divine bliss and togetherness.
+</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col border border-secondary/15">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-base">🪔</span>
+<span class="font-title-lg text-primary text-sm font-semibold">Suresh Kumar &amp; Family</span>
+</div>
+<span class="text-[10px] font-body-md text-outline">2 hrs ago</span>
+</div>
+<p class="font-body-md text-xs text-on-surface-variant mt-1">
+  May this sacred knot bring endless prosperity, joy, and peace. Eagerly waiting to celebrate in Karur!
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 9. BEST COMPLIMENTS & CLOSING ACTIONS -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-md flex flex-col items-center text-center border border-secondary/30">
+<!-- Monogram Emblem footer -->
+<h4 class="font-title-lg text-primary text-lg font-semibold">
+  “Your presence &amp; aashirvaad are our greatest gifts.”
+</h4>
+<p class="font-body-md text-xs text-on-surface-variant max-w-sm mt-1 mb-4">
+  With Best Compliments from Near &amp; Dear Relatives, Family, and Friends.
+</p>
+<!-- Quick Action Buttons: WhatsApp / vCard -->
+<div class="flex flex-col sm:flex-row items-center gap-2.5 w-full">
+<a class="w-full flex-1 bg-emerald-700 hover:bg-emerald-800 text-white font-label-md text-xs uppercase tracking-wider py-2.5 px-4 rounded-lg flex items-center justify-center gap-2 transition-all shadow-sm font-semibold" href="https://api.whatsapp.com/send?text=Praveen%20%26%20Karishma%20Wedding%20Invitation%20%7C%20You%20are%20cordially%20invited%20to%20celebrate%20our%20sacred%20wedding%20union%20%26%20reception!%20View%20the%20invitation%20%26%20album:%20https://forever.love/praveen-weds-karishma" target="_blank">
+<span class="material-symbols-outlined text-sm">chat</span>
+Share on WhatsApp
+</a>
+<button class="w-full flex-1 bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-xs uppercase tracking-wider py-2.5 px-4 rounded-lg flex items-center justify-center gap-2 transition-all shadow-sm border border-secondary/30 font-semibold" onclick="downloadVCard()">
+<span class="material-symbols-outlined text-sm">contact_page</span>
+Save Contact
+</button>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-center gap-1.5 text-outline text-[11px] font-body-md">
+<span class="">Made with love for</span>
+<span class="font-semibold text-primary">#PraveenWedsKarishma</span>
+<span class="">• 2026</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Tap to Open Interaction
+  function handleTapToOpen() {
+    launchFlowerShower();
+
+    // Smooth scroll down to reveal full invitation card
+    const mainContent = document.getElementById("invitation-main-content");
+    if (mainContent) {
+      mainContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Countdown Timer Logic to Nov 20, 2026
+  function updateCountdown() {
+    const weddingDate = new Date("2026-11-20T06:00:00+05:30").getTime();
+    const now = new Date().getTime();
+    const diff = weddingDate - now;
+
+    if (diff > 0) {
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      const dEl = document.getElementById("days");
+      const hEl = document.getElementById("hours");
+      const mEl = document.getElementById("minutes");
+      const sEl = document.getElementById("seconds");
+
+      if (dEl) dEl.innerText = days;
+      if (hEl) hEl.innerText = hours;
+      if (mEl) mEl.innerText = minutes;
+      if (sEl) sEl.innerText = seconds;
+    }
+  }
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  // Audio Equalizer Micro-interaction
+  let isPlaying = true;
+  function toggleAudio() {
+    isPlaying = !isPlaying;
+    const icon = document.getElementById("audio-icon");
+    const eq = document.getElementById("equalizer-bars");
+    if (!isPlaying) {
+      icon.innerText = "volume_off";
+      eq.classList.add("opacity-30");
+    } else {
+      icon.innerText = "volume_up";
+      eq.classList.remove("opacity-30");
+    }
+  }
+
+  // Copy Link Micro-interaction
+  function copyInviteLink(btn) {
+    const url = "https://forever.love/praveen-weds-karishma";
+    navigator.clipboard.writeText(url).then(() => {
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `<span class="material-symbols-outlined text-xs">done</span><span>Copied!</span>`;
+      btn.classList.add("bg-emerald-800");
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove("bg-emerald-800");
+      }, 2000);
+    });
+  }
+
+  // Quick Message Template
+  function setTemplate(msg) {
+    const textarea = document.getElementById("blessing-msg");
+    if (textarea) {
+      textarea.value = msg;
+      textarea.focus();
+    }
+  }
+
+  // Add Blessing to List
+  function handleSendBlessing(e) {
+    e.preventDefault();
+    const name = document.getElementById("guest-name").value.trim();
+    const msg = document.getElementById("blessing-msg").value.trim();
+    const token = document.querySelector('input[name="token"]:checked')?.value || "💐";
+    const relation = document.querySelector('input[name="relation"]:checked')?.value || "Guest";
+
+    if (!name || !msg) return;
+
+    // Prepend to list
+    const list = document.getElementById("wishes-list");
+    const item = document.createElement("div");
+    item.className = "p-3 rounded-lg bg-surface-container-high flex flex-col border border-secondary/20 animate-fade-in";
+    item.innerHTML = `
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="text-base">${token}</span>
+          <span class="font-title-lg text-primary text-sm font-semibold">${name} <span class="text-[11px] font-normal text-outline">(${relation})</span></span>
+        </div>
+        <span class="text-[10px] font-body-md text-secondary font-semibold">Just now</span>
+      </div>
+      <p class="font-body-md text-xs text-on-surface mt-1">${msg}</p>
+    `;
+    list.prepend(item);
+
+    // Show confirmation
+    const toast = document.getElementById("toast-message");
+    toast.classList.remove("hidden");
+    setTimeout(() => {
+      toast.classList.add("hidden");
+    }, 4500);
+
+    // Trigger celebratory flower shower
+    launchFlowerShower();
+
+    // Reset Form
+    document.getElementById("wishes-form").reset();
+  }
+
+  // Flower Shower Micro-celebration
+  function launchFlowerShower() {
+    const container = document.getElementById("petal-container");
+    if (!container) return;
+
+    const petals = ["🌸", "🌼", "✨", "🌺", "💛", "🪔"];
+    for (let i = 0; i < 28; i++) {
+      const petal = document.createElement("div");
+      petal.innerText = petals[Math.floor(Math.random() * petals.length)];
+      petal.className = "absolute text-lg pointer-events-none transition-all duration-1000";
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.top = "-20px";
+      petal.style.opacity = "1";
+      petal.style.transform = `scale(${0.7 + Math.random() * 0.8})`;
+
+      container.appendChild(petal);
+
+      const endY = window.innerHeight + 50;
+      const duration = 2500 + Math.random() * 2000;
+
+      petal.animate([
+        { transform: "translateY(0) rotate(0deg)", opacity: 1 },
+        { transform: `translate(${Math.random() * 40 - 20}px, ${endY}px) rotate(${360 + Math.random() * 360}deg)`, opacity: 0 }
+      ], {
+        duration: duration,
+        easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+      }).onfinish = () => petal.remove();
+    }
+  }
+
+  // Download Contact vCard
+  function downloadVCard() {
+    const vcard = "BEGIN:VCARD\nVERSION:3.0\nFN:Praveen & Karishma Wedding\nORG:Praveen Kumar & Karishma Kalyanam\nNOTE:Wedding Nov 19 & 20, 2026 at Karpaga Mahal, Karur\nURL:https://forever.love/praveen-weds-karishma\nEND:VCARD";
+    const blob = new Blob([vcard], { type: "text/vcard" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "Praveen_Karishma_Wedding.vcf";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+</script></main>
+
+</body></html>
